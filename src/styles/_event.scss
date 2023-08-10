@@ -1,0 +1,60 @@
+.event{
+    padding: 80px 0;
+    &--frontend{
+        background: linear-gradient(180deg, #1B6CA7 0%, #442BDB 100%);
+    }
+    &--ui-ux{
+        background: linear-gradient(180deg, #442BDB 0%, #89223B 100%);
+
+    }
+    &--datascience{
+        background: linear-gradient(180deg, #89223B 0%, #9C791D 100%);
+
+    }
+    &--backend{
+        background: linear-gradient(180deg, #9C791D 0%, #89223B 100%);
+
+    }
+
+    
+    .container{
+        display: flex;
+        gap: 40px;
+
+    }
+
+    &--image-left{
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+    &__image{
+        max-width: 360px;
+    }
+
+    &__details{
+
+        &__title{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        &__description{
+           font-size: 16px;
+           line-height: 22px; 
+        }
+    }
+    @media (max-width:640px){
+        .container{
+            display: block;
+        }
+        &__details{
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+        &__image{
+            width: 100%;
+        }
+            
+    }
+}

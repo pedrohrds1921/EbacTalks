@@ -6,21 +6,49 @@
     <title>Ebac Tech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Just+Another+Hand&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <header class="hero">
+    <section class="hero">
         <div class="container">
-            <img class="hero__logo" src="./images/ebac_logo.svg" alt="Ebac">
-            <p class="hero__text">O maior evento de tecnologia do Brasil começa em
-                30d 17h 20min 56s</p>
+           
+        <img class="rocket" src="images/rocket.png" alt="Astronaut">
+
+            <div class="infos">
+                <h1 class="infos__title">SAVE THE DATE</h1>
+                <span class="infos__data"> 17/11/2023 às 22:30</span>
+                <p class="infos__text">O MELHOR FESTIVAL MUSICA COMEÇA EM </p>
+                <ul class="timer">
+                    <li class="timer__item timer__item--planet1 ">
+                        <span id="day">30</span>
+                        <p>Dias</p>
+                    </li>
+                    <li class="timer__item timer__item--planet2 ">
+                        <span id="hours" >30</span>
+                        <p>Horas</p>
+                    </li>
+                    <li class="timer__item  timer__item--planet3">
+                        <span id="minutes">30</span>
+                        <p>Minutos</p>
+                    </li>
+                    <li class="timer__item timer__item--planet4">
+                        <span id="seconds" >30</span>
+                        <p>Segundos</p>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+
+
+    </section>
  
 
 
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   
     <script src="scripts/main.js"></script>
 </body>
 </html>

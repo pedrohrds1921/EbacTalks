@@ -1,12 +1,44 @@
+@keyframes float {
+
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
 .hero{
+    width: 100vw;
+    height: 100vh;
     padding-top: 64px;
     padding-bottom:100px;
     background-image: url(../images/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    @media(max-width:640px){
+        display: block;
+        height: 100%;
+    }
     .container{
         position: relative;
+        display: flex;
+       justify-content: space-around;
+        height: 100%;
+        align-items: center;
+        
+        @media(max-width:640px){
+            display: block;
+        }
+        .rocket{
+            width: 350px;
+            animation:  float 5s ease-in-out infinite;
+        }
     }
     &::before{
     
@@ -14,25 +46,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color:#000;
+        background: linear-gradient(180deg, #4D14C7 0%, #14C7C7 100%);
+
         width: 100%;
         height: 100%;
-        opacity: 0.7;
+        opacity: 0.8;
     }
-    &__text{
-        margin-top: 64px;
-        margin-bottom: 64px;
-      
-        font-size: 40px;
-        font-weight: 800;
-        line-height: 56px; 
-        text-align: center;
-    }
-    &__logo{
-        display: block;
-        margin: 0 auto;
-        height: 80px;
-    }
+
 
     @media (max-width: 640px){
         padding: 40px 0 ;
@@ -48,4 +68,81 @@
 
     }
     
+}
+.infos{    
+    &__title{
+    text-align: center;
+    font-family: Jockey One;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: normal;
+    
+    }
+    &__data{
+        font-family: Jockey One;
+        font-size: 24px;
+        font-weight: 400;
+        display: block;
+        text-align: center;
+        margin-bottom: 60px;
+    
+        }
+    &__text{
+    max-width: 400px;
+    color: #C7B514;
+    font-family: Just Another Hand;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 60px;
+    margin-left: 30px;
+    }
+    .timer{
+        display: flex;
+        gap: 40px;
+        @media (max-width:640px){
+            justify-content: space-around;
+        }
+        &__item{
+            background-image: url(../images/Mars.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 128px;
+            height: 128px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media(max-width:640px){
+                width: 80px;
+                height: 80px;
+              
+            }
+            
+
+            span{
+                font-size: 64px;
+                @media(max-width:640px){
+                    font-size: 40px;
+                  
+                }
+            }
+
+            &--planet1{
+                background-image: url(../images/Earth.png);  
+            }
+            
+            &--planet2{
+                background-image: url(../images/Mars.png);  
+            }
+            &--planet3{
+                background-image: url(../images/planet2.png);  
+            }
+            &--planet4{
+                background-image: url(../images/Planet.png);  
+            }
+        }
+    }
 }

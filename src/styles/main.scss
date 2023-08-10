@@ -1,14 +1,20 @@
 @use 'hero';
+@use 'components/infos_bar';
+@use 'components/button';
+@use 'event';
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    list-style: none;
     color: #fff;
+  
 }
 .container{
     max-width: 960px;
+    background: none;
     width: 100%;
     margin: 0 auto;
     @media (max-width:640px) {
@@ -17,4 +23,6 @@
     @media (max-width:1024px) {
         max-width: 90%;
     }
+}body{
+    background: linear-gradient(180deg, #4D14C7 0%, #14C7C7 100%);
 }
